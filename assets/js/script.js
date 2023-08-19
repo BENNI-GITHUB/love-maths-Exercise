@@ -19,10 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
-/**
- * The main game "loop", called when the script is first loaded
- * and after the user's answer has been processed
- */
+
 function runGame(gameType) {
 
     // Creates two random numbers between 1 and 25
@@ -33,9 +30,9 @@ function runGame(gameType) {
         displayAdditionQuestion(num1, num2);
     }else if(gameType ===  "multiply"){
         displayMultiplyQuestion(num1, num2);
-    } else if (gameType === "subtract"){
+    }else if (gameType === "subtract"){
         displaySubtractQuestion(num1, num2);
-    } else {
+    }else {
         alert(`Unknown game type: ${gameType}`);
         throw `Unknown game type: ${gameType}. Aborting!`;
     }
